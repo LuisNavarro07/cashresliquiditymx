@@ -1,0 +1,36 @@
+\documentclass{article}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage[margin=1in]{geometry}
+\begin{document}
+
+\begin{table}[tbp] \centering
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+
+\caption{Heckman Selection Model: Short Term Borrowing and Cash Reserves}
+\label{tab:Regression_StDebt}
+\begin{tabularx}{\linewidth}{lCCCCC}
+
+\toprule
+&{(1)}&{(2)}&{(3)}&{(4)}&{(5)} \tabularnewline \midrule
+{}&{}&{}&{}&{}&{} \tabularnewline
+\midrule \addlinespace[\belowrulesep]
+\textbf{Panel A: Second Stage (Outcome Model)}&&&&& \tabularnewline
+\midrule Cash Reserves (\% DR)&--0.1674***&--0.1001*&0.0238&0.0342&--0.1001* \tabularnewline
+&(0.0535)&(0.0558)&(0.0606)&(0.1694)&(0.0558) \tabularnewline
+\midrule \textbf{Panel B: First Stage (Selection Model)}&&&&& \tabularnewline
+Budget Error (\% DR)&--2.1133&--2.1133&--2.1133&--2.1133&--2.1133 \tabularnewline
+&(3.2889)&(3.2889)&(3.2889)&(3.2889)&(3.2889) \tabularnewline
+Mean of Dep Var&0.0520&0.0520&0.0520&0.0520&0.0520 \tabularnewline
+\midrule Observations&629&629&629&629&629 \tabularnewline
+Controls&No&Yes&No&Yes&Yes \tabularnewline
+State FE&No&No&Yes&Yes&No \tabularnewline
+Time FE&Yes&Yes&Yes&Yes&Yes \tabularnewline
+\bottomrule \addlinespace[\belowrulesep]
+
+\end{tabularx}
+\begin{flushleft}
+\footnotesize Notes: Panel A shows the results from the second stage regression. Panel B shows displays the results of the instrument used for the selection model. Estimation is done using Heckman's (1979) two-step efficient estimates of parameters and standard errors. Results in Column (5) replicate the econometric specification at \citep{suDoesFinancialSlack2018}. All the dependent, independent, and instrumental variables are expressed as a percentage of each state's average discretionary revenues (DR) from 2009-2016. Standard errors clustered at the state level A */**/*** indicate significance at the 10/5/1\% levels.
+\end{flushleft}
+\end{table}
+\end{document}
